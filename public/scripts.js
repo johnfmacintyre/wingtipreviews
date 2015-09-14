@@ -1,0 +1,1 @@
+$('#ratingRaty').raty({ starType: 'i' });

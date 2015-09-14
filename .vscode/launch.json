@@ -21,7 +21,12 @@
 			// Optional arguments passed to the runtime executable.
 			"runtimeArgs": ["--nolazy"],
 			// Environment variables passed to the program.
-			"env": { },
+			"env": {
+				"DOCDB_HOST": "https://wingtipreviews.documents.azure.com:443/",
+				"DOCDB_AUTH_KEY": "",
+				"DOCDB_DATABASE": "wingtipreviews",
+				"DOCDB_COLLECTION": "reviews"
+			},
 			// Use JavaScript source maps (if they exist).
 			"sourceMaps": false,
 			// If JavaScript source maps are enabled, the generated code is expected in this directory.
