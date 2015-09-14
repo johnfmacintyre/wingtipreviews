@@ -2,7 +2,7 @@
 "use strict";
 
 var DocumentDBClient = require('documentdb').DocumentClient;
-var DocumentDBUtils = require('./docdb-utils');
+//var DocumentDBUtils = require('./docdb-utils');
 
 var host = process.env.DOCDB_HOST,
   authKey = process.env.DOCDB_AUTH_KEY,
