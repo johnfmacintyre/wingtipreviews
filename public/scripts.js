@@ -4,8 +4,8 @@
 
 // On Page Load
 $(document).ready(function () {
-	// Install Raty on Review Modal.
-	$('#review-rating').raty({ starType: 'img' });
+	// DEMO: Install Raty ratings.
+	// $('#review-rating').raty({ starType: 'img' });
 	
 	// Register the Add Review - Submit button.
 	$('#newReview').on('click', WingTipReviews.submitReviewButtonHandler);
@@ -27,17 +27,19 @@ WingTipReviews.submitReviewButtonHandler = function (e) {
 	var btn = $(this);
 	var eventId = $('#review-eventId').val();
 	var comment = $('#review-comment').val();
-	var rating = $('#review-rating').raty('score');
+	// DEMO: Get the rating score.
+	// var rating = $('#review-rating').raty('score');
 
 	// Block the form submit, and disable the form button.
 	e.preventDefault();
 	btn.button('loading');
 
-	// Post the comment.
+	// Post the comment to the app server api.
 	$.post('/api/events/' + eventId + '/comments',
 		{
-			"comment": comment,
-			"rating": rating
+			"comment": comment
+			// DEMO: Post the rating score to the app server api.
+			// ,"rating": rating
 		},
 		function (data) {
 			// Reset the form fields and hide the modal.

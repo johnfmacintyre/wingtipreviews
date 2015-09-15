@@ -11,14 +11,17 @@ CommentsRoute.prototype = {
     var eventId = req.params.id;
     var user = self.getCurrentUser();
     var comment = req.body.comment;
-    var rating = parseInt(req.body.rating);
+    
+    // DEMO: Retrieve the rating passed in by the POST request.
+    // var rating = parseInt(req.body.rating);
 
     var commentDoc = {
       "type": "comment",
       "eventid": eventId,
       "commentText": comment,
-      "user": user,
-      "rating": rating
+      "user": user
+      // DEMO: Place the rating in to the DocumentDB document.
+      // , "rating": rating
     }
 
     self.commentsDbDao.addComment(commentDoc, function (err, commentDoc) {
