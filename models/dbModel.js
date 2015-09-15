@@ -5,9 +5,6 @@ var config = require('./dbConfig');
 
 var DocumentDBClient = require('documentdb').DocumentClient;
 
-async = require('async');
-
-
 /* All data access objects (DAOs) for this model go below.
 Paths are defined from the roo (app.js)  directory)*/
 

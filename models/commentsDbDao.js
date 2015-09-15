@@ -50,7 +50,7 @@ CommentsDbDao.prototype = {
 		var self = this;
 	
 		var querySpec = {
-			query: 'SELECT * FROM root r WHERE r.commentId=@commentId',
+			query: 'SELECT * FROM root r WHERE r.commentId=@commentId AND r.type="comment"',
 			parameters: [{
 						 name: '@commentId',
 						 value: commentId
@@ -142,7 +142,7 @@ CommentsDbDao.prototype = {
 		var self = this;
 	
 		var querySpec = {
-			query: 'SELECT * FROM root r WHERE r.eventId=@eventId',
+			query: 'SELECT * FROM root r WHERE r.eventid=@eventId AND r.type="comment"',
 			parameters: [{
 						 name: '@eventId',
 						 value: eventId
@@ -153,7 +153,7 @@ CommentsDbDao.prototype = {
 			if (err) {
 				callback(err);
 			} else {
-				callback(null, results[0]);
+				callback(null, results);
 			}
 		});
 	}

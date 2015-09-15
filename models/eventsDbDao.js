@@ -122,7 +122,7 @@ EventsDbDao.prototype = {
 		var self = this;
 	
 		var querySpec = {
-			query: 'SELECT * FROM root r WHERE r.id=@id',
+			query: 'SELECT * FROM root r WHERE r.id=@id AND r.type="event"',
 			parameters: [{
 						 name: '@id',
 						 value: eventId
@@ -143,7 +143,7 @@ EventsDbDao.prototype = {
       	// 'SELECT * FROM events e  WHERE ST_DISTANCE(e.Location, { "type": "Point", "coordinates": [-122.19, 47.36] }) < 100000 AND e.date BETWEEN 1442545200 AND 1446346800'
 		  
 		var querySpec = {
-			query: 'SELECT * FROM root r',
+			query: 'SELECT * FROM root r WHERE r.type="event" ORDER BY r.date',
 			parameters: undefined
 		};
 	
@@ -151,7 +151,7 @@ EventsDbDao.prototype = {
 			if (err) {
 				callback(err);
 			} else {
-				callback(null, results[0]);
+				callback(null, results);
 			}
 		});
 	}
