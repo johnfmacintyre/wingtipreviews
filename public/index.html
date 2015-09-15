@@ -67,7 +67,7 @@
             <div class="col-sm-7 col-md-6 colsumn nopad">
               <div class="logo">
                 <img src="./images/ticketmaestro-logo.jpg" class="img-responsive pull-left">
-                <h1 class="logo-heading"><span>WingTipReviews</span></h1>
+                <h1 class="logo-heading"><span>Write a Review</span></h1>
               </div>
             </div>
             <div class="col-sm-6 col-md-6 column">
@@ -83,17 +83,21 @@
         <div class="modal-body">
           <div class="row clearfix">
             <div class="col-sm-12 col-md-12 column">
-              <form role="form" method="POST" action="/">
-                <h3 class="form-hdng">Write a Review</h3>
+              <form role="form" id="reviewForm" method="POST" action="/">
+                <h3 class="form-hdng"><span id='review-artistName'>Artist</span> at <span id='review-venueName'>Venue</span></h3>
                 <div class="form-group">
-                  <label for="comment">Feedback:</label>
-                  <textarea class="form-control input-box" rows="5" id="comment"></textarea>
+                  <input type="hidden" id="review-eventId" value=""/>
+                  <br/>
+                  
+                  <label for="review-comment">Feedback:</label>
+                  <textarea class="form-control input-box" rows="5" id="review-comment"></textarea>
+                  <br/>
 
-                  <label for="rating">Rating:</label>
-                  <input type="hidden" id="rating" name="rating" value=""/>
-                  <div id="ratingRaty"></div>
+                  <label for="review-rating">Rating:</label>
+                  <div id="review-rating"></div>
+                  <br/>
                 </div>
-                <button type="submit" class="btn btn-default btn-block blue-btn" id="newReview" name="newReview">
+                <button class="btn btn-default btn-block blue-btn" id="newReview" name="newReview" data-dismiss="modal">
                   <i class="fa fa-check"></i> Submit
                 </button>
               </form>

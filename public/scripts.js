@@ -4,7 +4,7 @@
 // On Page Load
 $(document).ready(function () {
 	// Install Raty on Review Modal.
-	$('#ratingRaty').raty({ starType: 'i' });
+	$('#review-rating').raty({ starType: 'img' });
 	
 	// Get and render events
 	WingTipReviews.getEvents(WingTipReviews.renderEvents);
@@ -25,9 +25,16 @@ WingTipReviews.renderEvents = function (events) {
 	// Empty the parent event div (remove loading spinner).
 	eventContainer.empty();
 	
-	// Append each event
 	for (i = 0; i < events.length; i++) {
+		// Render the event.
 		eventContainer.append(WingTipReviews.renderEvent(events[i]));
+		
+		// Register the review button to open the modal.
+		eventContainer.on('click', "#" + events[i].id, function () {
+			$('#review-eventId').val(this.id);
+			$('#review-venueName').text($('#' + this.id).attr('venue'));
+			$('#review-artistName').text($('#' + this.id).attr('artist'));
+		})
 	}
 }
 
@@ -47,7 +54,9 @@ WingTipReviews.renderEvent = function (event) {
 		'    <p>' + event.venue.name + '</p>',
 		'  </div>',
 		'  <div class="find-seat">',
-		'    <a href="#" class="find-seats-link" data-toggle="modal" data-target="#reviewModal" data-backdrop="static" data-keyboard="false"><i class="fa fa-pencil"></i> Review</a>',
+		'    <a href="#" class="find-seats-link" id="' + event.id + '" artist="' + event.artist.name + '" venue="' + event.venue.name + '" data-toggle="modal" data-target="#reviewModal" data-backdrop="static" data-keyboard="false">',
+		'      <i class="fa fa-pencil"></i> Review',
+		'    </a>',
 		'  </div>',
 		'</div>'
 	].join('\n');
@@ -57,4 +66,4 @@ WingTipReviews.renderEvent = function (event) {
 
 // CONSTANTS
 WingTipReviews.monthNames = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
-WingTipReviews.dayNames = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
+WingTipReviews.dayNames = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
