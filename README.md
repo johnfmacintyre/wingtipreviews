@@ -1,4 +1,4 @@
-# wingtiptickets-reviews
+# wingtipreviews
 
 DocumentDB demo application.
 
