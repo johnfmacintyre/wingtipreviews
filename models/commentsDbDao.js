@@ -73,7 +73,7 @@ CommentsDbDao.prototype = {
 			if (err) {
 				var status = docdbUtils.checkHttpError(err, responseHeaders);
 				if(status == 0) {
-					callback(comment);
+					callback(null, doc);
 				}
 				else if(status == -1) {
 					console.log("Error!");
@@ -93,7 +93,7 @@ CommentsDbDao.prototype = {
 					callback(err); //something went really wrong!
 				}
 			} else {
-				callback(comment);
+				callback(null, doc);
 			}
 		});
 	},
@@ -111,7 +111,7 @@ CommentsDbDao.prototype = {
 					if (err) {
 						var status = docdbUtils.checkHttpError(err, responseHeaders);
 						if(status == 0) {
-							callback(null);
+							callback(null, replaced);
 						}
 						else if(status == -1) {
 							console.log("Error!");
@@ -131,7 +131,7 @@ CommentsDbDao.prototype = {
 							callback(err); //something went really wrong!
 						}
 					} else {
-						callback(null);
+						callback(null, replaced);
 					}
 				});
 			}
