@@ -7,8 +7,8 @@ DocumentDB demo application.
 ### Download the source code.
 
 ```
-git clone git@github.com/aliuy/wingtiptickets-reviews
-cd wingtiptickets-reviews
+git clone git@github.com/aliuy/wingtipreviews
+cd wingtipreviews
 npm install
 ```
 
