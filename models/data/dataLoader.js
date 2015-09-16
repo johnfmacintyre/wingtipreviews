@@ -95,7 +95,7 @@ DataLoader.prototype = {
 					callback(err);
 				} 
 				else if(status > 0) {
-					var t = setTimeout(self.addNewevent.bind(self), status, event, callback);
+					var t = setTimeout(self.addDataObj.bind(self), status, dataObj, callback);
 				}
 				else {
 					console.log('Error! Unexpected status = ' + status);
