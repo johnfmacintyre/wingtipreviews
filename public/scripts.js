@@ -86,7 +86,7 @@ WingTipReviews.renderEvent = function (event) {
 		'    <p>' + event.venue.name + '</p>',
 		'  </div>',
 		'  <div class="find-seat">',
-		'    <a href="#" class="find-seats-link" id="' + event.id + '" artist="' + event.artist.name + '" venue="' + event.venue.name + '" data-toggle="modal" data-target="#reviewModal" data-backdrop="static" data-keyboard="false">',
+		'    <a href="#" class="btn btn-lg find-seats-link" id="' + event.id + '" artist="' + event.artist.name + '" venue="' + event.venue.name + '" data-toggle="modal" data-target="#reviewModal" data-backdrop="static" data-keyboard="false">',
 		'      <i class="fa fa-pencil"></i> Review',
 		'    </a>',
 		'  </div>',
