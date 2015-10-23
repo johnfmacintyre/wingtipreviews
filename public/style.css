@@ -131,6 +131,11 @@ div {
 }
 .btn:focus {
   outline-style: none !important;
+  color: #fff;
+}
+.btn:hover {
+  outline-style: none !important;
+  color: #fff;
 }
 a:focus {
   outline-style: none !important;
