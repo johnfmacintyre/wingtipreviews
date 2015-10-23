@@ -1,261 +1,470 @@
-[{
-	"type": "event",
-	"date": 1394536683256,
-	"artist": {
-		"id": "55f74fee0f3a72cc79440827",
-		"name": "Ratatat"
-	},
-	"venue": {
-		"id": "a1a069c2-b5bf-422b-8524-7ec41ab41c70",
-		"name": "The ShowBox: Market",
-		"Location": {
-			"type": "Point",
-			"coordinates": [-122.339704, 47.608414]
-		}
-	},
-	"id": "0d8ac3c7-bfde-99a2-e875-4b6dccff8cc9"
-}, {
-	"type": "event",
-	"date": 1439790579189,
-	"artist": {
-		"id": "55f74feeca89496ace9869cf",
-		"name": "Justice"
-	},
-	"venue": {
-		"id": "a1a069c2-b5bf-422b-8524-7ec41ab41c70",
-		"name": "The ShowBox: Market",
-		"Location": {
-			"type": "Point",
-			"coordinates": [-122.339704, 47.608414]
-		}
-	},
-	"id": "add2491f-f2c2-3305-b31a-daec9aa2a876"
-}, {
-	"type": "event",
-	"date": 1433853118904,
-	"artist": {
-		"id": "55f74fee423589deb97404b9",
-		"name": "Daft Punk"
-	},
-	"venue": {
-		"id": "a1a069c2-b5bf-422b-8524-7ec41ab41c70",
-		"name": "The ShowBox: Market",
-		"Location": {
-			"type": "Point",
-			"coordinates": [-122.339704, 47.608414]
-		}
-	},
-	"id": "6a9ea98e-58e4-3812-1253-57d9b534f205"
-}, {
-	"type": "event",
-	"date": 1419415152336,
-	"artist": {
-		"id": "55f74feeb556b6c2c5e0f079",
-		"name": "Major Lazer"
-	},
-	"venue": {
-		"id": "a1a069c2-b5bf-422b-8524-7ec41ab41c70",
-		"name": "The ShowBox: Market",
-		"Location": {
-			"type": "Point",
-			"coordinates": [-122.339704, 47.608414]
-		}
-	},
-	"id": "d13daac5-6fec-790e-445e-47b627f1a9be"
-}, {
-	"type": "event",
-	"date": 1428890896970,
-	"artist": {
-		"id": "55f74fee1670762071852ae1",
-		"name": "Dillon Francis"
-	},
-	"venue": {
-		"id": "a1a069c2-b5bf-422b-8524-7ec41ab41c70",
-		"name": "The ShowBox: Market",
-		"Location": {
-			"type": "Point",
-			"coordinates": [-122.339704, 47.608414]
-		}
-	},
-	"id": "eec4e7ea-60a1-33c2-c78d-eaf099001f95"
-}, {
-	"type": "event",
-	"date": 1412874677085,
-	"artist": {
-		"id": "55f74fee4d30ac7951e0ed4a",
-		"name": "The Presidents of the USA"
-	},
-	"venue": {
-		"id": "87f51842-8306-4caa-bbf2-e244e2df14e5",
-		"name": "The Showbox: SODO",
-		"Location": {
-			"type": "Point",
-			"coordinates": [-122.334207, 47.587925]
-		}
-	},
-	"id": "ce27ef6a-e3c1-586a-fbdc-1e6b248e4dec"
-}, {
-	"type": "event",
-	"date": 1393091231267,
-	"artist": {
-		"id": "55f74feec2852ac755734467",
-		"name": "The Who"
-	},
-	"venue": {
-		"id": "87f51842-8306-4caa-bbf2-e244e2df14e5",
-		"name": "The Showbox: SODO",
-		"Location": {
-			"type": "Point",
-			"coordinates": [-122.334207, 47.587925]
-		}
-	},
-	"id": "f3e32aa1-a8f1-072c-dbd1-9adf8183fcbd"
-}, {
-	"type": "event",
-	"date": 1392364760844,
-	"artist": {
-		"id": "55f74fee935860c33988739c",
-		"name": "Def Leppard"
-	},
-	"venue": {
-		"id": "87f51842-8306-4caa-bbf2-e244e2df14e5",
-		"name": "The Showbox: SODO",
-		"Location": {
-			"type": "Point",
-			"coordinates": [-122.334207, 47.587925]
-		}
-	},
-	"id": "30a0785d-d021-d574-7c21-5b9a3e1d3755"
-}, {
-	"type": "event",
-	"date": 1440863949563,
-	"artist": {
-		"id": "55f74fee0c0a63d5eed1b5ae",
-		"name": "Hollywood Undead"
-	},
-	"venue": {
-		"id": "87f51842-8306-4caa-bbf2-e244e2df14e5",
-		"name": "The Showbox: SODO",
-		"Location": {
-			"type": "Point",
-			"coordinates": [-122.334207, 47.587925]
-		}
-	},
-	"id": "2cd9aea4-417d-bfb1-3a55-a47fbc6117e6"
-}, {
-	"type": "event",
-	"date": 1396761821892,
-	"artist": {
-		"id": "55f74fee4c8151108473d4f3",
-		"name": "Empire of the Sun"
-	},
-	"venue": {
-		"id": "87f51842-8306-4caa-bbf2-e244e2df14e5",
-		"name": "The Showbox: SODO",
-		"Location": {
-			"type": "Point",
-			"coordinates": [-122.334207, 47.587925]
-		}
-	},
-	"id": "5b302c0d-14d8-5f89-c176-8327c560f12b"
-}, {
-	"type": "comment",
-	"eventid": "0d8ac3c7-bfde-99a2-e875-4b6dccff8cc9",
-	"commentText": "Awesome venue for a show, the whole place is pretty close to the stage. There's a lower floor and bars on both sides. The whole place feels close to the stage. I came here for a Jurrasic 5 show and I will definitely be checking for more shows coming up.",
-	"user": {
-		"id": "55f75ae344666679a4b2c891",
-		"firstname": "Madden",
-		"lastname": "Brock"
-	},
-	"id": "84ac5d4e-5947-7c9d-023e-6d5c056c8ad8"
-}, {
-	"type": "comment",
-	"eventid": "0d8ac3c7-bfde-99a2-e875-4b6dccff8cc9",
-	"commentText": "I love this venue. I've seen shows in small intimate venues in nyc, Boston, DC, San Diego, Jersey, and Philly, and the Showbox is probably tied as my favorite. From rock bands, to hip-hop, indie, and alternative shows, I have always enjoyed this space. The musicians can usually feel the warmth of the Seattle welcome here as well. The sound is fabulous and the ambiance of the Art Deco era is the perfect environment for a concert. \nThe restrooms (women left of stage, men right) are plentiful and clean, and the bars offer several microbrews as well as full service drinks. Food here is decent, and if you're wanting a quieter space to eat and listen to music you can always eat in the Showbox restaurant/bar right by the entrance. \nIn true old-timey fashion they also have a photo booth in the back corner for documenting your night between acts! Love love love this space! Looking forward to many more shows here!",
-	"user": {
-		"id": "55f75ae4d83d33e8e3d0ced4",
-		"firstname": "Dyer",
-		"lastname": "Mathews"
-	},
-	"id": "d5ad89d8-2eaa-6f8e-d07f-ea1fdbdf5dcd"
-}, {
-	"type": "comment",
-	"eventid": "0d8ac3c7-bfde-99a2-e875-4b6dccff8cc9",
-	"commentText": "Showbox at the Market is an awesome venue to see your favourite band play. It's deceptively big and open, considering the place looks pretty small on the outside; there's a seating area and booths near the bar; the whole place is pretty clean; and no matter where you are, you feel close to the stage. Whether I was waiting for a drink at the bar or fighting off fellow vicious fans in the moshpit, I felt like I had a good view of the show. \nOn top of being a good venue in general, I was pretty impressed with the customer service. The band I went see (Dir en grey) couldn't make their original show date because their bus broke down or something. I was extremely upset and worried that the show would be cancelled, or tickets would be non-refundable, but the venue pushed the show to the same time next day. We didn't have to get new tickets or anything!  \nWhen doors opened, they collected tickets fast and got everyone in in a timely manner, so it did not delay the show. Even though people were literally lined up around the block to get in, we were inside in a matter of 20 minutes. \nIt was because of my awesome experience at the Showbox that I had no problem shelling out to see Dir en grey play here again this year... and I fly in from Hawaii to see them. \nThanks for being so awesome, and bringing a variety of different performers to Seattle, Showbox!!",
-	"user": {
-		"id": "55f75ae4699d60c463e367f4",
-		"firstname": "Burgess",
-		"lastname": "Morrow"
-	},
-	"id": "75af4c76-f730-dbfb-5f73-4d1bc1c72726"
-}, {
-	"type": "comment",
-	"eventid": "0d8ac3c7-bfde-99a2-e875-4b6dccff8cc9",
-	"commentText": "Their hours for their ticket office is a JOKE!!! Open only Wednesday's and Friday's from 10am - 2pm. I can't believe they are seriously only open twice a week for 4 hours. I'm flabbergasted.\nToday I got off work at 1:30pm, shot over to Seattle and made it to Showbox by 1:55 only to be told they are incurring technical issues and they are unable to help at all and won't be able to help me til next Wednesday, Unacceptable!!! So how long was the ticket office open this week? Less than 8 hours? SHOWBOX TICKET OFFICE IS SUCH TRASH!!!\nI would recommend not attending anything hosted at either Showbox venues!!! Hope the business goes under.",
-	"user": {
-		"id": "55f75ae43e8564158add224c",
-		"firstname": "Mccarthy",
-		"lastname": "Sosa"
-	},
-	"id": "71edcfba-1da4-be93-2531-7d4430c61cd3"
-}, {
-	"type": "comment",
-	"eventid": "0d8ac3c7-bfde-99a2-e875-4b6dccff8cc9",
-	"commentText": "Saw an old favorite band at this venue! I've been to smaller and bigger ones, this was on the hand of smallish-big. There is a large floor you can stand on and listen to bands play, and then 4-5 various seating areas! THIS was nice, you're not forced to stand the entire time waiting for the opening band, was great.\nAlthough, I think the far right spot where I sat was great, but the sound bounced off the walls a weird way, may not have been the most ideal spot, but it was great because it was right by one of the bars, and on a ledge so people standing wouldn't be in your direct eye line. \nSo all in all, if you love a band that will be performing here, you must see them. It's a much more intimate experience! :)",
-	"user": {
-		"id": "55f75ae47223d514ce5528b8",
-		"firstname": "Dominguez",
-		"lastname": "Pickett"
-	},
-	"id": "dcbca62d-5a87-c5a8-71f2-35ed1a1f0220"
-}, {
-	"type": "comment",
-	"eventid": "0d8ac3c7-bfde-99a2-e875-4b6dccff8cc9",
-	"commentText": "The Showbox gets really great bands from across the music spectra (rock, punk, hip hop, metal) and has great sound, great sight lines and great lights. Also easy access to nice big bar areas for the grown-ups (most shows are all ages, which is GREAT for the music scene). Huge main floor area where you can stand back and watch or get up close and do that run-into-everybody 'dance' thing that somehow is still popular after all of these decades. And the nice high ceiling usually means you're not going to roast while you're watching a show, even if it's sold out.\nDrinks are tasty and boozy and reasonably priced, and bartenders are friendly! Wow! That never happens at a rock club!\nOnly knocks: it's right in the heart of downtown, which means parking is a pain in the butt, and ticket prices are generally pretty high. Not like Eagles Reunion Tour high, but certainly 2 or 3 times more than a show at the Sunset or the Crocodile.",
-	"user": {
-		"id": "55f75ae4adf09611eeff411f",
-		"firstname": "Deborah",
-		"lastname": "Terrell"
-	},
-	"id": "a773e461-3853-564d-afff-99672ded5a87"
-}, {
-	"type": "comment",
-	"eventid": "0d8ac3c7-bfde-99a2-e875-4b6dccff8cc9",
-	"commentText": "This place has improved a lot from the last I remembered.  It's  much cleaner and better lighting too.  The Crew (especially)  working  this time are much attentive and friendly. The show last night was off the hook with Etana performing (Love her..hope to see her soon) and\n 'Anuhea'?  Great venue, tickets were very reasonable for several acts that went on prior and were also very entertaining.  I didn't mind the short intermissions, still got to dance here,and there, and bumped in to a lot of friends.  Good times!\nI can't wait for my next venue...",
-	"user": {
-		"id": "55f75ae4f6f8a1cffd3e87af",
-		"firstname": "Adriana",
-		"lastname": "Ayers"
-	},
-	"id": "4f23f05d-0a2a-406d-cfbc-5e1b2a014193"
-}, {
-	"type": "comment",
-	"eventid": "0d8ac3c7-bfde-99a2-e875-4b6dccff8cc9",
-	"commentText": "Went to a show last night and they came onstage and hauled away the drum kit and keyboard during The Church's final song. Showbox management is to blame. Never in all my life have I seen that happen! They were 2 min over end time. BFD.",
-	"user": {
-		"id": "55f75ae4b5573500426b30bd",
-		"firstname": "Erica",
-		"lastname": "Lara"
-	},
-	"id": "aaf98e7d-a257-89f2-3d08-41ac8fd614ec"
-}, {
-	"type": "comment",
-	"eventid": "0d8ac3c7-bfde-99a2-e875-4b6dccff8cc9",
-	"commentText": "Great place to c a show. Not much to review since your entire experience is aboot the band. The staff is great the place is clean...uhhh..this is hard since this place changes with the bands",
-	"user": {
-		"id": "55f75ae4034bbe5b6f7366bc",
-		"firstname": "Nielsen",
-		"lastname": "Hampton"
-	},
-	"id": "24626bf9-c07f-5ad4-32f3-9add7c76fae8"
-}, {
-	"type": "comment",
-	"eventid": "0d8ac3c7-bfde-99a2-e875-4b6dccff8cc9",
-	"commentText": "My husband and I went to The Church and Psychedelic Furs concert this week.  Good show. BEST customer service from the Showbox staff.  We were former VIP customers until the annual subscription priced us out of to the market.  For the show we bought VIP seats to enjoy a table view. Those standing directly behind us were drunk, loud and rude.  Several people kept sitting at the empty table next to us.  As the evening progressed they became more obnoxious.  Once i let the manager know, she immediately corrected the situation.\nThanks Showbox for great service and a fun show!",
-	"user": {
-		"id": "55f75ae476e75745e9abc316",
-		"firstname": "Phoebe",
-		"lastname": "Waller"
-	},
-	"id": "6c6d2e52-86f9-6295-5659-0fbac1e29b27"
-}]
+[
+  {
+    "id": 1,
+    "type": "event",
+    "date": 1445637190,
+    "artist": {
+      "id": 1,
+      "name": "Julie and the Plantes"
+    },
+    "venue": {
+      "id": 1,
+      "name": "Conrad Fischer Stands",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -118.243685,
+          34.052234
+        ]
+      }
+    }
+  },
+  {
+    "id": 2,
+    "type": "event",
+    "date": 1445723590,
+    "artist": {
+      "id": 1,
+      "name": "Julie and the Plantes"
+    },
+    "venue": {
+      "id": 2,
+      "name": "Hayden Lawrence Gardens",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -104.990251,
+          39.739236
+        ]
+      }
+    }
+  },
+  {
+    "id": 3,
+    "type": "event",
+    "date": 1445809990,
+    "artist": {
+      "id": 1,
+      "name": "Julie and the Plantes"
+    },
+    "venue": {
+      "id": 3,
+      "name": "Rene Charron Highrise",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -81.655651,
+          30.332184
+        ]
+      }
+    }
+  },
+  {
+    "id": 4,
+    "type": "event",
+    "date": 1445896390,
+    "artist": {
+      "id": 1,
+      "name": "Julie and the Plantes"
+    },
+    "venue": {
+      "id": 4,
+      "name": "Aldo Richter Hall",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -71.058880,
+          42.360082
+        ]
+      }
+    }
+  },
+  {
+    "id": 5,
+    "type": "event",
+    "date": 1445982790,
+    "artist": {
+      "id": 1,
+      "name": "Julie and the Plantes"
+    },
+    "venue": {
+      "id": 5,
+      "name": "Harriet Collier Auditorium",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -83.045754,
+          42.331427
+        ]
+      }
+    }
+  },
+  {
+    "id": 6,
+    "type": "event",
+    "date": 1446069190,
+    "artist": {
+      "id": 1,
+      "name": "Julie and the Plantes"
+    },
+    "venue": {
+      "id": 6,
+      "name": "Samuel Boyle Center",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -76.147424,
+          43.048122
+        ]
+      }
+    }
+  },
+  {
+    "id": 7,
+    "type": "event",
+    "date": 1446155590,
+    "artist": {
+      "id": 1,
+      "name": "Julie and the Plantes"
+    },
+    "venue": {
+      "id": 7,
+      "name": "Millie Stevens Memorial Plaza",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -122.676482,
+          45.523062
+        ]
+      }
+    }
+  },
+  {
+    "id": 8,
+    "type": "event",
+    "date": 1446241990,
+    "artist": {
+      "id": 1,
+      "name": "Julie and the Plantes"
+    },
+    "venue": {
+      "id": 8,
+      "name": "Louisa Zimmerman Stadium",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -97.743061,
+          30.267153
+        ]
+      }
+    }
+  },
+  {
+    "id": 9,
+    "type": "event",
+    "date": 1446328390,
+    "artist": {
+      "id": 1,
+      "name": "Julie and the Plantes"
+    },
+    "venue": {
+      "id": 9,
+      "name": "Lara Ehrle Amphitheter",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -111.891047,
+          40.760779
+        ]
+      }
+    }
+  },
+  {
+    "id": 10,
+    "type": "event",
+    "date": 1446414790,
+    "artist": {
+      "id": 1,
+      "name": "Julie and the Plantes"
+    },
+    "venue": {
+      "id": 10,
+      "name": "Antione Lacroix Dome",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -122.332071,
+          47.606209
+        ]
+      }
+    }
+  },
+  {
+    "id": 11,
+    "type": "event",
+    "date": 1446501190,
+    "artist": {
+      "id": 1,
+      "name": "Julie and the Plantes"
+    },
+    "venue": {
+      "id": 11,
+      "name": "Claude LAngelier Field",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -117.426047,
+          47.658780
+        ]
+      }
+    }
+  },
+  {
+    "id": 12,
+    "type": "event",
+    "date": 1446587590,
+    "artist": {
+      "id": 1,
+      "name": "Julie and the Plantes"
+    },
+    "venue": {
+      "id": 12,
+      "name": "Maya Haynes Arena",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -122.121512,
+          47.673988
+        ]
+      }
+    }
+  },
+  {
+    "id": 15,
+    "type": "event",
+    "date": 1446673990,
+    "artist": {
+      "id": 4,
+      "name": "Tony Rius"
+    },
+    "venue": {
+      "id": 12,
+      "name": "Maya Haynes Arena",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -122.121512,
+          47.673988
+        ]
+      }
+    }
+  },
+  {
+    "id": 16,
+    "type": "event",
+    "date": 1518051241,
+    "artist": {
+      "id": 5,
+      "name": "Tim Swift"
+    },
+    "venue": {
+      "id": 12,
+      "name": "Maya Haynes Arena",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -122.121512,
+          47.673988
+        ]
+      }
+    }
+  },
+  {
+    "id": 17,
+    "type": "event",
+    "date": 1518051241,
+    "artist": {
+      "id": 6,
+      "name": "Miles Spears"
+    },
+    "venue": {
+      "id": 12,
+      "name": "Maya Haynes Arena",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -122.121512,
+          47.673988
+        ]
+      }
+    }
+  },
+  {
+    "id": 18,
+    "type": "event",
+    "date": 1518051241,
+    "artist": {
+      "id": 7,
+      "name": "Joseph Barber"
+    },
+    "venue": {
+      "id": 12,
+      "name": "Maya Haynes Arena",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -122.121512,
+          47.673988
+        ]
+      }
+    }
+  },
+  {
+    "id": 19,
+    "type": "event",
+    "date": 1518051241,
+    "artist": {
+      "id": 8,
+      "name": "Nikki Dylan"
+    },
+    "venue": {
+      "id": 12,
+      "name": "Maya Haynes Arena",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -122.121512,
+          47.673988
+        ]
+      }
+    }
+  },
+  {
+    "id": 20,
+    "type": "event",
+    "date": 1518051241,
+    "artist": {
+      "id": 9,
+      "name": "Maria John"
+    },
+    "venue": {
+      "id": 12,
+      "name": "Maya Haynes Arena",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -122.121512,
+          47.673988
+        ]
+      }
+    }
+  },
+  {
+    "id": 21,
+    "type": "event",
+    "date": 1518051241,
+    "artist": {
+      "id": 3,
+      "name": "Prince Keys"
+    },
+    "venue": {
+      "id": 12,
+      "name": "Maya Haynes Arena",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -122.121512,
+          47.673988
+        ]
+      }
+    }
+  },
+  {
+    "id": 22,
+    "type": "event",
+    "date": 1518051241,
+    "artist": {
+      "id": 10,
+      "name": "Selena Clarkson"
+    },
+    "venue": {
+      "id": 12,
+      "name": "Maya Haynes Arena",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -122.121512,
+          47.673988
+        ]
+      }
+    }
+  },
+  {
+    "id": 23,
+    "type": "event",
+    "date": 1518051241,
+    "artist": {
+      "id": 11,
+      "name": "Reese Lopez"
+    },
+    "venue": {
+      "id": 12,
+      "name": "Maya Haynes Arena",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -122.121512,
+          47.673988
+        ]
+      }
+    }
+  },
+  {
+    "id": 24,
+    "type": "event",
+    "date": 1518051241,
+    "artist": {
+      "id": 12,
+      "name": "Calvin Wonder"
+    },
+    "venue": {
+      "id": 12,
+      "name": "Maya Haynes Arena",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -122.121512,
+          47.673988
+        ]
+      }
+    }
+  },
+  {
+    "id": 27,
+    "type": "event",
+    "date": 1580500800,
+    "artist": {
+      "id": 4,
+      "name": "Tony Rius"
+    },
+    "venue": {
+      "id": 8,
+      "name": "Louisa Zimmerman Stadium",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -97.743061,
+          30.267153
+        ]
+      }
+    }
+  },
+  {
+    "eventId": "1",
+    "type": "comment",
+    "venueId": "1",
+    "artistId": "1",
+    "feedback": "The beer was warm, and even worse.. it was bud light. Why cheap out on beer?",
+    "user": "John Macintyre"
+  }
+]
