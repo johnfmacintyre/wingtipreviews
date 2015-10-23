@@ -23,8 +23,7 @@ CommentsRoute.prototype = {
       "venueId": venueId,
       "artistId": artistId,
       "feedback": comment,
-      "user": user,
-      "test": "test"
+      "user": user
       // DEMO: Place the rating in to the DocumentDB document.
       // , "rating": rating
     }

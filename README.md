@@ -19,8 +19,8 @@ Set up the following environment variables (e.g. `/etc/environment`, `/.vscode/l
 ```
 DOCDB_HOST="[YOUR_DOCDB_ENDPOINT_HERE]"
 DOCDB_AUTH_KEY="[YOUR_DOCDB_KEY_HERE]"
-DOCDB_DATABASE="wingtipreviews"
-DOCDB_COLLECTION="reviews"
+DOCDB_DATABASE="[YOUR_DOCDB_DATABASE]"
+DOCDB_COLLECTION="[YOUR_DOCDB_COLLECTION]"
 ```
 
 ## Start
