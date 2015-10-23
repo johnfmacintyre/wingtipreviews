@@ -52,7 +52,7 @@ CommentsRoute.prototype = {
   },
   
   getCurrentUser: function() {
-    return "John Macintyre"
+    return "John Macintyre";
   }
 };
 

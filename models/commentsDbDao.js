@@ -2,6 +2,8 @@ var docdbUtils = require('./docdbUtils');
 
 function CommentsDbDao(documentDBClient, databaseId, collectionId) {
 	this.client = documentDBClient;
+	this.eventHubClient = null;
+
 	this.databaseId = databaseId;
 	this.collectionId = collectionId;
 
@@ -96,6 +98,15 @@ CommentsDbDao.prototype = {
 				callback(null, doc);
 			}
 		});
+
+		if (self.eventHubClient) {
+			self.eventHubClient.sendMessage(JSON.stringify(comment), null, function (err, statusCode) {
+				if (err) {
+					console.log(err);
+					console.log(statusCode);
+				}
+			});
+		}
 	},
 
 	updateComment: function (newComment, callback) {
@@ -156,6 +167,11 @@ CommentsDbDao.prototype = {
 				callback(null, results);
 			}
 		});
+	},
+
+	setEventHubClient: function (eventHubClient) {
+		var self = this;
+		self.eventHubClient = eventHubClient;
 	}
 
 };

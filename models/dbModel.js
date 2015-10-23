@@ -1,6 +1,7 @@
 /* global DocumentDBConnPolicy */
 /* global DocumentDBClient */
 var DocumentDBClient = require('documentdb').DocumentClient;
+var EventHubClient = require('event-hub-client');
 
 var config = require('./dbConfig');
 
@@ -27,6 +28,14 @@ DbModel.prototype = {
 			masterKey: config.authKey
 		});
 
+		if (config.eventHubNamespace && config.eventHubEntityPath && config.eventHubSharedAccessKeyName && config.eventHubSharedAccessKey) {
+			self.eventHubClient = EventHubClient.restClient(
+				config.eventHubNamespace,
+				config.eventHubEntityPath,
+				config.eventHubSharedAccessKeyName,
+				config.eventHubSharedAccessKey);
+		}
+
 		self.eventsDbDao = new EventsDbDao(self.dbClient, config.databaseId, config.eventCollection);
 		self.eventsDbDao.init(function (err) {
 			if (err)
@@ -50,6 +59,10 @@ DbModel.prototype = {
 				if (completionCount == completeCount)
 					callDataLoader();
 			});
+			
+			if(self.eventHubClient) {
+				self.commentsDbDao.setEventHubClient(self.eventHubClient);
+			}
 		}
 
 		function callDataLoader() {
