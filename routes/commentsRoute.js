@@ -13,7 +13,9 @@ CommentsRoute.prototype = {
     var comment = req.body.comment;
     
     // DEMO: Retrieve the rating passed in by the POST request.
-    // var rating = parseInt(req.body.rating);
+    var rating = parseInt(req.body.rating);
+    // DEMO: Retrieve the user location
+    var location = self.getCurrentLocation();
 
     var commentDoc = {
       "type": "comment",
@@ -21,7 +23,9 @@ CommentsRoute.prototype = {
       "commentText": comment,
       "user": user
       // DEMO: Place the rating in to the DocumentDB document.
-      // , "rating": rating
+      , "rating": rating
+      // DEMO: Add location to comment document
+      , "location": location
     }
 
     self.commentsDbDao.addComment(commentDoc, function (err, commentDoc) {
@@ -52,6 +56,13 @@ CommentsRoute.prototype = {
 		"firstname": "John",
 		"lastname": "Macintyre"
     }
+  },
+    
+  getCurrentLocation: function() {
+    return {
+	  "type":"Point",
+	  "coordinates":[-122.3491,47.6204]
+	  }
   }
 };
 
