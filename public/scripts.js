@@ -19,6 +19,8 @@ function WingTipReviews() { };
 
 WingTipReviews.reviewButtonHandler = function () {
 	$('#review-eventId').val(this.id);
+	$('#review-venueId').val(this.id);
+	$('#review-artistId').val(this.id);
 	$('#review-venueName').text($('#' + this.id).attr('venue'));
 	$('#review-artistName').text($('#' + this.id).attr('artist'));
 };
@@ -26,6 +28,8 @@ WingTipReviews.reviewButtonHandler = function () {
 WingTipReviews.submitReviewButtonHandler = function (e) {
 	var btn = $(this);
 	var eventId = $('#review-eventId').val();
+	var venueId = $('#review-venueId').val();
+	var artistId = $('#review-artistId').val();
 	var comment = $('#review-comment').val();
 	// DEMO: Get the rating score.
 	// var rating = $('#review-rating').raty('score');
@@ -37,7 +41,9 @@ WingTipReviews.submitReviewButtonHandler = function (e) {
 	// Post the comment to the app server api.
 	$.post('/api/events/' + eventId + '/comments',
 		{
-			"comment": comment
+			"comment": comment,
+			"venueId": venueId,
+			"artistId": artistId,
 			// DEMO: Post the rating score to the app server api.
 			// ,"rating": rating
 		},
@@ -86,7 +92,7 @@ WingTipReviews.renderEvent = function (event) {
 		'    <p>' + event.venue.name + '</p>',
 		'  </div>',
 		'  <div class="find-seat">',
-		'    <a href="#" class="find-seats-link" id="' + event.id + '" artist="' + event.artist.name + '" venue="' + event.venue.name + '" data-toggle="modal" data-target="#reviewModal" data-backdrop="static" data-keyboard="false">',
+		'    <a href="#" class="btn btn-lg find-seats-link" id="' + event.id + '" artist="' + event.artist.name + '" venue="' + event.venue.name + '" artistId="' + event.artist.id + '" venueId="' + event.venue.id + '" data-toggle="modal" data-target="#reviewModal" data-backdrop="static" data-keyboard="false">',
 		'      <i class="fa fa-pencil"></i> Review',
 		'    </a>',
 		'  </div>',

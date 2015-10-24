@@ -9,6 +9,8 @@ CommentsRoute.prototype = {
   writeCommentsByEventId: function (req, res, next) {
     var self = this;
     var eventId = req.params.id;
+    var venueId = req.body.venueId;
+    var artistId = req.body.artistId;
     var user = self.getCurrentUser();
     var comment = req.body.comment;
     
@@ -18,9 +20,11 @@ CommentsRoute.prototype = {
     var location = self.getCurrentLocation();
 
     var commentDoc = {
+      "eventId": eventId,
       "type": "comment",
-      "eventid": eventId,
-      "commentText": comment,
+      "venueId": venueId,
+      "artistId": artistId,
+      "feedback": comment,
       "user": user
       // DEMO: Place the rating in to the DocumentDB document.
       , "rating": rating
@@ -51,11 +55,7 @@ CommentsRoute.prototype = {
   },
   
   getCurrentUser: function() {
-    return {
-		"id": "561f8d0e-bbae-47a5-b84e-37a1c183b8f6",
-		"firstname": "John",
-		"lastname": "Macintyre"
-    }
+    return "John Macintyre";
   },
     
   getCurrentLocation: function() {

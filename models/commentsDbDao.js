@@ -2,25 +2,27 @@ var docdbUtils = require('./docdbUtils');
 
 function CommentsDbDao(documentDBClient, databaseId, collectionId) {
 	this.client = documentDBClient;
+	this.eventHubClient = null;
+
 	this.databaseId = databaseId;
 	this.collectionId = collectionId;
-	
+
 	this.database = null;
 	this.collection = null;
 }
 
 CommentsDbDao.prototype = {
-	init: function(callback) {
+	init: function (callback) {
 		var self = this;
-		docdbUtils.getOrCreateDatabase(self.client, self.databaseId, function(err, db) {
+		docdbUtils.getOrCreateDatabase(self.client, self.databaseId, function (err, db) {
 			if (err) {
 				console.log("Error!");
 				console.log(err);
 				callback(err);//something went really wrong!
-			} 
+			}
 			else {
 				self.database = db;
-				docdbUtils.getOrCreateCollection(self.client, self.database._self, self.collectionId, null, function(err, coll) {
+				docdbUtils.getOrCreateCollection(self.client, self.database._self, self.collectionId, null, function (err, coll) {
 					if (err) {
 						console.log("Error!");
 						console.log(err);
@@ -33,10 +35,10 @@ CommentsDbDao.prototype = {
 			}
 		});
 	},
-	
-	query: function(querySpec, callback) {
+
+	query: function (querySpec, callback) {
 		var self = this;
-		self.client.queryDocuments(self.collection._self, querySpec).toArray(function(err, results) {
+		self.client.queryDocuments(self.collection._self, querySpec).toArray(function (err, results) {
 			if (err) {
 				console.log("Error!");
 				callback(err);//something went really wrong!!
@@ -45,19 +47,19 @@ CommentsDbDao.prototype = {
 			}
 		});
 	},
-	
-	getComment: function(commentId, callback) {
+
+	getComment: function (commentId, callback) {
 		var self = this;
-	
+
 		var querySpec = {
 			query: 'SELECT * FROM root r WHERE r.commentId=@commentId AND r.type="comment"',
 			parameters: [{
-						 name: '@commentId',
-						 value: commentId
-					 }]
+				name: '@commentId',
+				value: commentId
+			}]
 		};
-	
-		self.query(querySpec, function(err, results) {
+
+		self.query(querySpec, function (err, results) {
 			if (err) {
 				callback(err);
 			} else {
@@ -65,24 +67,24 @@ CommentsDbDao.prototype = {
 			}
 		});
 	},
-	
-	addComment: function(comment, callback) {
+
+	addComment: function (comment, callback) {
 		var self = this;
-	
-		self.client.createDocument(self.collection._self, comment, function(err, doc, responseHeaders) {
+
+		self.client.createDocument(self.collection._self, comment, function (err, doc, responseHeaders) {
 			if (err) {
 				var status = docdbUtils.checkHttpError(err, responseHeaders);
-				if(status == 0) {
+				if (status == 0) {
 					callback(null, doc);
 				}
-				else if(status == -1) {
+				else if (status == -1) {
 					console.log("Error!");
 					console.log(err);
 					console.log('Response headers:');
 					console.log(responseHeaders);
 					callback(err);
-				} 
-				else if(status > 0) {
+				}
+				else if (status > 0) {
 					var t = setTimeout(self.addNewcomment.bind(self), status, comment, callback);
 				}
 				else {
@@ -96,31 +98,40 @@ CommentsDbDao.prototype = {
 				callback(null, doc);
 			}
 		});
+
+		if (self.eventHubClient) {
+			self.eventHubClient.sendMessage(JSON.stringify(comment), null, function (err, statusCode) {
+				if (err) {
+					console.log(err);
+					console.log(statusCode);
+				}
+			});
+		}
 	},
-	
-	updateComment: function(newComment, callback) {
+
+	updateComment: function (newComment, callback) {
 		var self = this;
 
-		self.getComment(newComment.id, function(err, comment) {
+		self.getComment(newComment.id, function (err, comment) {
 			if (err) {
 				console.log("Error!");
 				console.log(err);
 				callback(err);//something went really wrong!
 			} else {
-				self.client.replaceDocument(comment._self, newComment, function(err, replaced, responseHeaders) {
+				self.client.replaceDocument(comment._self, newComment, function (err, replaced, responseHeaders) {
 					if (err) {
 						var status = docdbUtils.checkHttpError(err, responseHeaders);
-						if(status == 0) {
+						if (status == 0) {
 							callback(null, replaced);
 						}
-						else if(status == -1) {
+						else if (status == -1) {
 							console.log("Error!");
 							console.log(err);
 							console.log('Response headers:');
 							console.log(responseHeaders);
 							callback(err);
-						} 
-						else if(status > 0) {
+						}
+						else if (status > 0) {
 							var t = setTimeout(self.updateDeviceDoc.bind(self), status, newComment, callback);
 						}
 						else {
@@ -137,26 +148,32 @@ CommentsDbDao.prototype = {
 			}
 		});
 	},
-	
-	getCommentsByEventId: function(eventId, callback) {
+
+	getCommentsByEventId: function (eventId, callback) {
 		var self = this;
-	
+
 		var querySpec = {
 			query: 'SELECT * FROM root r WHERE r.eventid=@eventId AND r.type="comment"',
 			parameters: [{
-						 name: '@eventId',
-						 value: eventId
-					 }]
+				name: '@eventId',
+				value: eventId
+			}]
 		};
-	
-		self.query(querySpec, function(err, results) {
+
+		self.query(querySpec, function (err, results) {
 			if (err) {
 				callback(err);
 			} else {
 				callback(null, results);
 			}
 		});
+	},
+
+	setEventHubClient: function (eventHubClient) {
+		var self = this;
+		self.eventHubClient = eventHubClient;
 	}
+
 };
 
 module.exports = CommentsDbDao;

@@ -1,49 +1,84 @@
 /* global DocumentDBConnPolicy */
 /* global DocumentDBClient */
+var DocumentDBClient = require('documentdb').DocumentClient;
+var EventHubClient = require('event-hub-client');
 
 var config = require('./dbConfig');
 
-var DocumentDBClient = require('documentdb').DocumentClient;
-
-/* All data access objects (DAOs) for this model go below.
+/* All data access objects (DAOs) for self model go below.
 Paths are defined from the roo (app.js)  directory)*/
 
 var CommentsDbDao = require('./CommentsDbDao');
 var EventsDbDao = require('./EventsDbDao');
+var DataLoader = require('./data/dataLoader')
 
 function DbModel() {
 }
 
 DbModel.prototype = {
-	init : function(callback) {
+	init: function (callback) {
+		var self = this;
+
 		console.log("DB host = " + config.host);
-		
+
 		var completionCount = 0;
 		var completeCount = 2;
-		
-		this.dbClient = new DocumentDBClient(config.host, {
+
+		self.dbClient = new DocumentDBClient(config.host, {
 			masterKey: config.authKey
 		});
-		
-		this.eventsDbDao = new EventsDbDao(this.dbClient, config.databaseId, config.eventCollection);
-		this.eventsDbDao.init(function(err) {
-			if(err)
-				throw(err);
+
+		if (config.eventHubNamespace && config.eventHubEntityPath && config.eventHubSharedAccessKeyName && config.eventHubSharedAccessKey) {
+			self.eventHubClient = EventHubClient.restClient(
+				config.eventHubNamespace,
+				config.eventHubEntityPath,
+				config.eventHubSharedAccessKeyName,
+				config.eventHubSharedAccessKey);
+		}
+
+		self.eventsDbDao = new EventsDbDao(self.dbClient, config.databaseId, config.eventCollection);
+		self.eventsDbDao.init(function (err) {
+			if (err)
+				throw (err);
 			console.log("EventDbDao initialized");
 			completionCount++;
-			if(completionCount == completeCount)
-				callback();
+			//BUGBUG - prevents race if events and comments point to the same collection
+			//if(completionCount == completeCount)
+			//	callDataLoader();
+			loadOtherCollections();
 		});
 		
-		this.commentsDbDao = new CommentsDbDao(this.dbClient, config.databaseId, config.commentCollection);
-		this.commentsDbDao.init(function(err) {
-			if(err)
-				throw(err);
-			console.log("CommentDbDao initialized");
-			completionCount++;
-			if(completionCount == completeCount)
-				callback();
-		});
+		//BUGBUG - prevents race if events and comments point to the same collection
+		function loadOtherCollections() {
+			self.commentsDbDao = new CommentsDbDao(self.dbClient, config.databaseId, config.commentCollection);
+			self.commentsDbDao.init(function (err) {
+				if (err)
+					throw (err);
+				console.log("CommentDbDao initialized");
+				completionCount++;
+				if (completionCount == completeCount)
+					callDataLoader();
+			});
+			
+			if(self.eventHubClient) {
+				self.commentsDbDao.setEventHubClient(self.eventHubClient);
+			}
+		}
+
+		function callDataLoader() {
+			//BUGBUG - using event collection to laod data - abstraction leak
+			self.dataLoader = new DataLoader(self.dbClient, config.databaseId, config.eventCollection);
+			self.dataLoader.init(function (err) {
+				if (err)
+					throw (err);
+
+				self.dataLoader.loadSampleData(function (err) {
+					if (err)
+						throw (err);
+					callback();
+				});
+			});
+		}
 	}
 };
 

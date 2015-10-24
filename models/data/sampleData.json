@@ -1,0 +1,470 @@
+[
+  {
+    "id": 1,
+    "type": "event",
+    "date": 1445637190,
+    "artist": {
+      "id": 1,
+      "name": "Julie and the Plantes"
+    },
+    "venue": {
+      "id": 1,
+      "name": "Conrad Fischer Stands",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -118.243685,
+          34.052234
+        ]
+      }
+    }
+  },
+  {
+    "id": 2,
+    "type": "event",
+    "date": 1445723590,
+    "artist": {
+      "id": 1,
+      "name": "Julie and the Plantes"
+    },
+    "venue": {
+      "id": 2,
+      "name": "Hayden Lawrence Gardens",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -104.990251,
+          39.739236
+        ]
+      }
+    }
+  },
+  {
+    "id": 3,
+    "type": "event",
+    "date": 1445809990,
+    "artist": {
+      "id": 1,
+      "name": "Julie and the Plantes"
+    },
+    "venue": {
+      "id": 3,
+      "name": "Rene Charron Highrise",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -81.655651,
+          30.332184
+        ]
+      }
+    }
+  },
+  {
+    "id": 4,
+    "type": "event",
+    "date": 1445896390,
+    "artist": {
+      "id": 1,
+      "name": "Julie and the Plantes"
+    },
+    "venue": {
+      "id": 4,
+      "name": "Aldo Richter Hall",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -71.058880,
+          42.360082
+        ]
+      }
+    }
+  },
+  {
+    "id": 5,
+    "type": "event",
+    "date": 1445982790,
+    "artist": {
+      "id": 1,
+      "name": "Julie and the Plantes"
+    },
+    "venue": {
+      "id": 5,
+      "name": "Harriet Collier Auditorium",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -83.045754,
+          42.331427
+        ]
+      }
+    }
+  },
+  {
+    "id": 6,
+    "type": "event",
+    "date": 1446069190,
+    "artist": {
+      "id": 1,
+      "name": "Julie and the Plantes"
+    },
+    "venue": {
+      "id": 6,
+      "name": "Samuel Boyle Center",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -76.147424,
+          43.048122
+        ]
+      }
+    }
+  },
+  {
+    "id": 7,
+    "type": "event",
+    "date": 1446155590,
+    "artist": {
+      "id": 1,
+      "name": "Julie and the Plantes"
+    },
+    "venue": {
+      "id": 7,
+      "name": "Millie Stevens Memorial Plaza",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -122.676482,
+          45.523062
+        ]
+      }
+    }
+  },
+  {
+    "id": 8,
+    "type": "event",
+    "date": 1446241990,
+    "artist": {
+      "id": 1,
+      "name": "Julie and the Plantes"
+    },
+    "venue": {
+      "id": 8,
+      "name": "Louisa Zimmerman Stadium",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -97.743061,
+          30.267153
+        ]
+      }
+    }
+  },
+  {
+    "id": 9,
+    "type": "event",
+    "date": 1446328390,
+    "artist": {
+      "id": 1,
+      "name": "Julie and the Plantes"
+    },
+    "venue": {
+      "id": 9,
+      "name": "Lara Ehrle Amphitheter",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -111.891047,
+          40.760779
+        ]
+      }
+    }
+  },
+  {
+    "id": 10,
+    "type": "event",
+    "date": 1446414790,
+    "artist": {
+      "id": 1,
+      "name": "Julie and the Plantes"
+    },
+    "venue": {
+      "id": 10,
+      "name": "Antione Lacroix Dome",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -122.332071,
+          47.606209
+        ]
+      }
+    }
+  },
+  {
+    "id": 11,
+    "type": "event",
+    "date": 1446501190,
+    "artist": {
+      "id": 1,
+      "name": "Julie and the Plantes"
+    },
+    "venue": {
+      "id": 11,
+      "name": "Claude LAngelier Field",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -117.426047,
+          47.658780
+        ]
+      }
+    }
+  },
+  {
+    "id": 12,
+    "type": "event",
+    "date": 1446587590,
+    "artist": {
+      "id": 1,
+      "name": "Julie and the Plantes"
+    },
+    "venue": {
+      "id": 12,
+      "name": "Maya Haynes Arena",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -122.121512,
+          47.673988
+        ]
+      }
+    }
+  },
+  {
+    "id": 15,
+    "type": "event",
+    "date": 1446673990,
+    "artist": {
+      "id": 4,
+      "name": "Tony Rius"
+    },
+    "venue": {
+      "id": 12,
+      "name": "Maya Haynes Arena",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -122.121512,
+          47.673988
+        ]
+      }
+    }
+  },
+  {
+    "id": 16,
+    "type": "event",
+    "date": 1518051241,
+    "artist": {
+      "id": 5,
+      "name": "Tim Swift"
+    },
+    "venue": {
+      "id": 12,
+      "name": "Maya Haynes Arena",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -122.121512,
+          47.673988
+        ]
+      }
+    }
+  },
+  {
+    "id": 17,
+    "type": "event",
+    "date": 1518051241,
+    "artist": {
+      "id": 6,
+      "name": "Miles Spears"
+    },
+    "venue": {
+      "id": 12,
+      "name": "Maya Haynes Arena",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -122.121512,
+          47.673988
+        ]
+      }
+    }
+  },
+  {
+    "id": 18,
+    "type": "event",
+    "date": 1518051241,
+    "artist": {
+      "id": 7,
+      "name": "Joseph Barber"
+    },
+    "venue": {
+      "id": 12,
+      "name": "Maya Haynes Arena",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -122.121512,
+          47.673988
+        ]
+      }
+    }
+  },
+  {
+    "id": 19,
+    "type": "event",
+    "date": 1518051241,
+    "artist": {
+      "id": 8,
+      "name": "Nikki Dylan"
+    },
+    "venue": {
+      "id": 12,
+      "name": "Maya Haynes Arena",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -122.121512,
+          47.673988
+        ]
+      }
+    }
+  },
+  {
+    "id": 20,
+    "type": "event",
+    "date": 1518051241,
+    "artist": {
+      "id": 9,
+      "name": "Maria John"
+    },
+    "venue": {
+      "id": 12,
+      "name": "Maya Haynes Arena",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -122.121512,
+          47.673988
+        ]
+      }
+    }
+  },
+  {
+    "id": 21,
+    "type": "event",
+    "date": 1518051241,
+    "artist": {
+      "id": 3,
+      "name": "Prince Keys"
+    },
+    "venue": {
+      "id": 12,
+      "name": "Maya Haynes Arena",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -122.121512,
+          47.673988
+        ]
+      }
+    }
+  },
+  {
+    "id": 22,
+    "type": "event",
+    "date": 1518051241,
+    "artist": {
+      "id": 10,
+      "name": "Selena Clarkson"
+    },
+    "venue": {
+      "id": 12,
+      "name": "Maya Haynes Arena",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -122.121512,
+          47.673988
+        ]
+      }
+    }
+  },
+  {
+    "id": 23,
+    "type": "event",
+    "date": 1518051241,
+    "artist": {
+      "id": 11,
+      "name": "Reese Lopez"
+    },
+    "venue": {
+      "id": 12,
+      "name": "Maya Haynes Arena",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -122.121512,
+          47.673988
+        ]
+      }
+    }
+  },
+  {
+    "id": 24,
+    "type": "event",
+    "date": 1518051241,
+    "artist": {
+      "id": 12,
+      "name": "Calvin Wonder"
+    },
+    "venue": {
+      "id": 12,
+      "name": "Maya Haynes Arena",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -122.121512,
+          47.673988
+        ]
+      }
+    }
+  },
+  {
+    "id": 27,
+    "type": "event",
+    "date": 1580500800,
+    "artist": {
+      "id": 4,
+      "name": "Tony Rius"
+    },
+    "venue": {
+      "id": 8,
+      "name": "Louisa Zimmerman Stadium",
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -97.743061,
+          30.267153
+        ]
+      }
+    }
+  },
+  {
+    "eventId": "1",
+    "type": "comment",
+    "venueId": "1",
+    "artistId": "1",
+    "feedback": "The beer was warm, and even worse.. it was bud light. Why cheap out on beer?",
+    "user": "John Macintyre"
+  }
+]
